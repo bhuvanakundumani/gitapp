@@ -1,5 +1,7 @@
 Gitapp::Application.routes.draw do
-  get "pages/about"
+  get "pages/Home"
+
+  get "pages/About"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
