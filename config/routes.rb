@@ -3,6 +3,9 @@ Gitapp::Application.routes.draw do
 
   get "pages/About"
 
+    
+    match "pages/Blog" => redirect("http://thinkdiffskool.wordpress.com/"), :as => :Blog
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

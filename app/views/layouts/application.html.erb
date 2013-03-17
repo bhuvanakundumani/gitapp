@@ -1,14 +1,44 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Gitapp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Bhuvana.KA's Website'</title>
+
+<%= stylesheet_link_tag    "style", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
 </head>
+
 <body>
-
-<%= yield %>
-
+<div id="container">
+		<div id="mainpic">
+        	<h1><span class="lighter"> </span></h1>
+            <h2>A website by Bhuvana KA </h2>
+        </div>  
+ 
+		
+        <div id="menu">
+        	<ul>
+            	<li class="menuitem"><%=link_to "Home", "/pages/Home" %></li>
+                <li class="menuitem"><%= link_to "About", "/pages/About" %></li>
+                <li class="menuitem"><%= link_to "Blog", "/pages/Blog"%> </li>
+                <li class="menuitem"><a href="#">Services</a></li>
+                <li class="menuitem"><a href="#">Design</a></li>
+              <li class="menuitem"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        
+		<div id="content">
+        	<h2><%= yield %>
+	        </h2>
+        	<p>&nbsp;</p>
+           	<p>&nbsp;</p>
+            
+            <div id="footer"><h3><a href="http://www.bhuvana.com">Designed by Bhuvana KA</a></h3></div>
+      </div>
+   </div>
 </body>
 </html>
